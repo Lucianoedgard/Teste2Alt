@@ -1,0 +1,668 @@
+object FrmCadastro: TFrmCadastro
+  Left = 392
+  Top = 90
+  Width = 647
+  Height = 553
+  Caption = 'Tela de Cadastro'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pgc: TPageControl
+    Left = 0
+    Top = 0
+    Width = 631
+    Height = 514
+    ActivePage = tsCadastro
+    Align = alClient
+    TabOrder = 0
+    object tsMensagem: TTabSheet
+      Caption = 'E-Mail'
+      object Label2: TLabel
+        Left = 6
+        Top = 233
+        Width = 86
+        Height = 13
+        Caption = 'Assunto (Subject):'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object Label6: TLabel
+        Left = 6
+        Top = 180
+        Width = 122
+        Height = 13
+        Caption = 'Para e-Mail (AddAddress):'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object Label3: TLabel
+        Left = 7
+        Top = 281
+        Width = 52
+        Height = 13
+        Caption = 'Mensagem'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object lblAdressName: TLabel
+        Left = 184
+        Top = 180
+        Width = 56
+        Height = 13
+        Caption = 'Para Nome:'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object lblFrom: TLabel
+        Left = 3
+        Top = 3
+        Width = 57
+        Height = 13
+        Caption = 'From e-Mail:'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object lblFromName: TLabel
+        Left = 292
+        Top = 2
+        Width = 57
+        Height = 13
+        Caption = 'From Name:'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object lblHost: TLabel
+        Left = 3
+        Top = 43
+        Width = 25
+        Height = 13
+        Caption = 'Host:'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object lblPort: TLabel
+        Left = 292
+        Top = 43
+        Width = 22
+        Height = 13
+        Caption = 'Port:'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object lblTipoAutenticacao: TLabel
+        Left = 364
+        Top = 44
+        Width = 90
+        Height = 13
+        Caption = 'Tipo Autentica'#231#227'o:'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object lblUser: TLabel
+        Left = 3
+        Top = 87
+        Width = 56
+        Height = 13
+        Caption = 'User Name:'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object lblPassword: TLabel
+        Left = 292
+        Top = 87
+        Width = 49
+        Height = 13
+        Caption = 'Password:'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object lblDefaultCharset: TLabel
+        Left = 3
+        Top = 132
+        Width = 76
+        Height = 13
+        Caption = 'Default Charset:'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object lbl1: TLabel
+        Left = 292
+        Top = 132
+        Width = 60
+        Height = 13
+        Caption = 'IDE Charset:'
+        Color = clBtnFace
+        ParentColor = False
+      end
+      object edSubject: TEdit
+        Left = 7
+        Top = 248
+        Width = 594
+        Height = 21
+        TabOrder = 2
+        Text = 'Dados cadastrais'
+      end
+      object edtAddressEmail: TEdit
+        Left = 6
+        Top = 198
+        Width = 163
+        Height = 21
+        TabOrder = 0
+        Text = 'emmanuel.sabino@altec.ws'
+        OnExit = edtAddressEmailExit
+      end
+      object mAltBody: TMemo
+        Left = 7
+        Top = 303
+        Width = 594
+        Height = 97
+        Lines.Strings = (
+          '(digite o texto que vai acompanhar o anexo)')
+        TabOrder = 3
+        WordWrap = False
+      end
+      object edtAddressName: TEdit
+        Left = 184
+        Top = 198
+        Width = 200
+        Height = 21
+        TabOrder = 1
+        Text = '(quem quer que seja)'
+      end
+      object edtFromName: TEdit
+        Left = 292
+        Top = 21
+        Width = 283
+        Height = 21
+        TabOrder = 4
+      end
+      object edtFrom: TEdit
+        Left = 3
+        Top = 21
+        Width = 283
+        Height = 21
+        TabOrder = 5
+        Text = 'emmanuel.sabino@altec.ws'
+        OnExit = edtFromExit
+      end
+      object edtHost: TEdit
+        Left = 3
+        Top = 61
+        Width = 283
+        Height = 21
+        TabOrder = 6
+        Text = 'smtp.altec.ws'
+      end
+      object edtPort: TEdit
+        Left = 292
+        Top = 61
+        Width = 58
+        Height = 21
+        TabOrder = 7
+        Text = '587'
+      end
+      object chkTLS: TCheckBox
+        Left = 364
+        Top = 63
+        Width = 45
+        Height = 17
+        Caption = 'TLS'
+        TabOrder = 8
+      end
+      object chkSSL: TCheckBox
+        Left = 415
+        Top = 63
+        Width = 45
+        Height = 17
+        Caption = 'SSL'
+        TabOrder = 9
+      end
+      object edtUser: TEdit
+        Left = 3
+        Top = 105
+        Width = 283
+        Height = 21
+        TabOrder = 10
+        Text = 'fulano@empresa.com.br'
+      end
+      object edtPassword: TEdit
+        Left = 292
+        Top = 105
+        Width = 283
+        Height = 21
+        TabOrder = 11
+        Text = 'emmanuel.sabino@altec.ws'
+      end
+      object chkMostraSenha: TCheckBox
+        Left = 348
+        Top = 86
+        Width = 77
+        Height = 17
+        Caption = 'Mostrar?'
+        TabOrder = 12
+        OnClick = chkMostraSenhaClick
+      end
+      object cbbDefaultCharset: TComboBox
+        Left = 3
+        Top = 151
+        Width = 283
+        Height = 21
+        Style = csDropDownList
+        ItemHeight = 13
+        TabOrder = 13
+      end
+      object cbbIdeCharSet: TComboBox
+        Left = 292
+        Top = 152
+        Width = 283
+        Height = 21
+        Style = csDropDownList
+        ItemHeight = 13
+        TabOrder = 14
+      end
+      object btnSalvarConfig: TButton
+        Left = 411
+        Top = 408
+        Width = 194
+        Height = 25
+        Caption = 'Salvar Configura'#231#227'o'
+        TabOrder = 15
+        OnClick = btnSalvarConfigClick
+      end
+    end
+    object tsCadastro: TTabSheet
+      Caption = 'Dados cadastrais'
+      ImageIndex = 2
+      object pnl1: TPanel
+        Left = 0
+        Top = 0
+        Width = 623
+        Height = 486
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        object Label1: TLabel
+          Left = 24
+          Top = 8
+          Width = 28
+          Height = 13
+          Caption = 'Nome'
+          FocusControl = dbedtNome
+        end
+        object lbl2: TLabel
+          Left = 24
+          Top = 48
+          Width = 50
+          Height = 13
+          Caption = 'Identidade'
+          FocusControl = dbedtIdentidade
+        end
+        object lbl3: TLabel
+          Left = 164
+          Top = 48
+          Width = 20
+          Height = 13
+          Caption = 'CPF'
+          FocusControl = dbedtCPF
+        end
+        object lbl4: TLabel
+          Left = 265
+          Top = 48
+          Width = 25
+          Height = 13
+          Caption = 'Email'
+          FocusControl = dbedtEmail
+        end
+        object dbedtNome: TMaskEdit
+          Tag = 1
+          Left = 24
+          Top = 24
+          Width = 577
+          Height = 21
+          MaxLength = 100
+          TabOrder = 0
+        end
+        object dbedtIdentidade: TMaskEdit
+          Tag = 2
+          Left = 24
+          Top = 64
+          Width = 134
+          Height = 21
+          MaxLength = 20
+          TabOrder = 1
+        end
+        object dbedtCPF: TMaskEdit
+          Tag = 3
+          Left = 164
+          Top = 64
+          Width = 93
+          Height = 21
+          EditMask = '000\.000\.000\-99;0'
+          MaxLength = 14
+          TabOrder = 2
+          OnExit = dbedtCPFExit
+        end
+        object dbedtEmail: TMaskEdit
+          Tag = 4
+          Left = 265
+          Top = 64
+          Width = 336
+          Height = 21
+          MaxLength = 100
+          TabOrder = 3
+          OnExit = dbedtEmailExit
+        end
+        object grp1: TGroupBox
+          Left = 24
+          Top = 91
+          Width = 577
+          Height = 278
+          Caption = 'Endere'#231'o'
+          TabOrder = 4
+          object lbl10: TLabel
+            Left = 12
+            Top = 220
+            Width = 33
+            Height = 13
+            Caption = 'Cidade'
+            FocusControl = dbedtCidade
+          end
+          object lbl11: TLabel
+            Left = 159
+            Top = 220
+            Width = 33
+            Height = 13
+            Caption = 'Estado'
+            FocusControl = dbedtEstado
+          end
+          object lbl12: TLabel
+            Left = 204
+            Top = 220
+            Width = 20
+            Height = 13
+            Caption = 'Pais'
+            FocusControl = dbedtPais
+          end
+          object lbl5: TLabel
+            Left = 12
+            Top = 17
+            Width = 21
+            Height = 13
+            Caption = 'CEP'
+            FocusControl = dbedtCEP
+          end
+          object lbl6: TLabel
+            Left = 12
+            Top = 57
+            Width = 54
+            Height = 13
+            Caption = 'Logradouro'
+            FocusControl = dbedtLogradouro
+          end
+          object lbl7: TLabel
+            Left = 12
+            Top = 97
+            Width = 37
+            Height = 13
+            Caption = 'Numero'
+            FocusControl = dbedtNumero
+          end
+          object lbl8: TLabel
+            Left = 12
+            Top = 137
+            Width = 64
+            Height = 13
+            Caption = 'Complemento'
+            FocusControl = dbedtComplemento
+          end
+          object lbl9: TLabel
+            Left = 12
+            Top = 177
+            Width = 27
+            Height = 13
+            Caption = 'Bairro'
+            FocusControl = dbedtBairro
+          end
+          object dbedtBairro: TMaskEdit
+            Tag = 9
+            Left = 12
+            Top = 193
+            Width = 264
+            Height = 21
+            MaxLength = 40
+            TabOrder = 4
+          end
+          object dbedtCEP: TMaskEdit
+            Tag = 5
+            Left = 12
+            Top = 33
+            Width = 63
+            Height = 21
+            EditMask = '00000\-999;0;_'
+            MaxLength = 9
+            TabOrder = 0
+            OnExit = dbedtCEPExit
+          end
+          object dbedtCidade: TMaskEdit
+            Tag = 10
+            Left = 12
+            Top = 239
+            Width = 134
+            Height = 21
+            MaxLength = 20
+            TabOrder = 5
+          end
+          object dbedtComplemento: TMaskEdit
+            Tag = 8
+            Left = 12
+            Top = 153
+            Width = 456
+            Height = 21
+            MaxLength = 30
+            TabOrder = 3
+          end
+          object dbedtEstado: TMaskEdit
+            Tag = 11
+            Left = 159
+            Top = 239
+            Width = 30
+            Height = 21
+            MaxLength = 2
+            TabOrder = 6
+          end
+          object dbedtLogradouro: TMaskEdit
+            Tag = 6
+            Left = 12
+            Top = 70
+            Width = 456
+            Height = 21
+            MaxLength = 40
+            TabOrder = 1
+          end
+          object dbedtNumero: TMaskEdit
+            Tag = 7
+            Left = 12
+            Top = 113
+            Width = 134
+            Height = 21
+            MaxLength = 10
+            TabOrder = 2
+          end
+          object dbedtPais: TMaskEdit
+            Tag = 12
+            Left = 204
+            Top = 239
+            Width = 264
+            Height = 21
+            MaxLength = 20
+            TabOrder = 7
+          end
+        end
+        object Panel1: TPanel
+          Left = 0
+          Top = 418
+          Width = 623
+          Height = 68
+          Align = alBottom
+          BevelOuter = bvNone
+          TabOrder = 5
+          object Button2: TButton
+            Left = 442
+            Top = 375
+            Width = 75
+            Height = 25
+            Caption = 'Salvar'
+            TabOrder = 0
+          end
+          object Button3: TButton
+            Left = 526
+            Top = 375
+            Width = 75
+            Height = 25
+            Caption = 'Enviar Email'
+            TabOrder = 1
+          end
+          object Panel2: TPanel
+            Left = 0
+            Top = 0
+            Width = 623
+            Height = 31
+            Align = alTop
+            BevelOuter = bvNone
+            TabOrder = 2
+            object btnSalvar: TButton
+              Left = 442
+              Top = 8
+              Width = 75
+              Height = 23
+              Caption = '&Salvar'
+              TabOrder = 0
+              OnClick = btnSalvarClick
+            end
+            object btnEnvio: TButton
+              Left = 526
+              Top = 8
+              Width = 75
+              Height = 23
+              Caption = '&Enviar Email'
+              Enabled = False
+              TabOrder = 1
+              OnClick = btnEnvioClick
+            end
+          end
+          object stQtdRegMemoria: TStaticText
+            Left = 408
+            Top = 43
+            Width = 4
+            Height = 4
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 3
+          end
+        end
+        object pnlWait: TPanel
+          Left = 0
+          Top = 370
+          Width = 623
+          Height = 48
+          Align = alBottom
+          BevelOuter = bvNone
+          Caption = 'Aguarde enviando email...'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -24
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 6
+          Visible = False
+        end
+      end
+    end
+  end
+  object ACBrMail1: TACBrMail
+    Host = '127.0.0.1'
+    Port = '25'
+    SetSSL = False
+    SetTLS = False
+    Attempts = 3
+    DefaultCharset = UTF_8
+    IDECharset = CP1252
+    Left = 528
+  end
+  object jvm1: TRxMemoryData
+    FieldDefs = <>
+    Left = 472
+    Top = 80
+    object jvm1Nome: TStringField
+      Tag = 1
+      FieldName = 'Nome'
+      Size = 100
+    end
+    object jvm1Identidade: TStringField
+      Tag = 2
+      FieldName = 'Identidade'
+    end
+    object jvm1CPF: TStringField
+      Tag = 3
+      FieldName = 'CPF'
+      Size = 14
+    end
+    object jvm1Email: TStringField
+      Tag = 4
+      DisplayWidth = 100
+      FieldName = 'Email'
+      Size = 100
+    end
+    object jvm1CEP: TStringField
+      Tag = 5
+      FieldName = 'CEP'
+      Size = 10
+    end
+    object jvm1Logradouro: TStringField
+      Tag = 6
+      FieldName = 'Logradouro'
+      Size = 40
+    end
+    object jvm1Numero: TIntegerField
+      Tag = 7
+      FieldName = 'Numero'
+    end
+    object jvm1Complemento: TStringField
+      Tag = 8
+      FieldName = 'Complemento'
+      Size = 30
+    end
+    object jvm1Bairro: TStringField
+      Tag = 9
+      DisplayWidth = 40
+      FieldName = 'Bairro'
+      Size = 40
+    end
+    object jvm1Cidade: TStringField
+      Tag = 10
+      FieldName = 'Cidade'
+    end
+    object jvm1Estado: TStringField
+      Tag = 11
+      FieldName = 'Estado'
+      Size = 2
+    end
+    object jvm1Pais: TStringField
+      Tag = 12
+      FieldName = 'Pais'
+    end
+  end
+end

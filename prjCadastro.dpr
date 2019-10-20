@@ -1,0 +1,18 @@
+program prjCadastro;
+
+uses
+  Forms,
+  uFrmCadastro in 'uFrmCadastro.pas' {FrmCadastro},
+  AuxLib in 'Lib\AuxLib.pas',
+  uEnderecoJSON in 'Lib\uEnderecoJSON.pas',
+  uLkJSON in 'Lib\uLkJSON.pas',
+  uValidarPCF in 'Lib\uValidarPCF.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.Title := 'Cadastro';
+  Application.CreateForm(TFrmCadastro, FrmCadastro);
+  Application.Run;
+end.
